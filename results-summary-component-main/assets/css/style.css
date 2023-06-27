@@ -146,14 +146,14 @@ button {
 
 @media (min-width: 32.5em) {
     body {
-        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        min-height: 100vh;
     }
 
     .page-wrapper {
-        width: 80%;
+        max-width: 90%;
     }
 
     main {
@@ -176,6 +176,6 @@ button {
 
 @media (min-width: 64em) {
     .page-wrapper {
-        width: 52%;
+        width: 55%;
     }
 }
