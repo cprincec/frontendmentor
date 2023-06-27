@@ -52,7 +52,6 @@ img {
 }
 
 @media (min-width: 32.5em) {
-
     .container {
         max-width: 320px;
     }

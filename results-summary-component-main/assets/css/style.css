@@ -5,11 +5,9 @@
 }
 
 body {
-    display: grid;
-    grid-template-rows: 1fr 50px;
-    justify-items: center;
-    align-items: center;
-    min-height: 100vh;
+    font-size: 16px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: hsl(241, 100%, 89%);
 }
 
 main {
@@ -25,12 +23,6 @@ img {
     display: block;
 }
 
-body {
-    font-size: 16px;
-    font-family: 'Hanken Grotesk', sans-serif;
-    color: hsl(241, 100%, 89%);
-}
-
 section {
     padding: 1.5rem;
 }
@@ -39,7 +31,6 @@ h1,
 h2 {
     font-size: 1.2rem;
 }
-
 
 
 picture {
@@ -154,13 +145,23 @@ button {
 
 
 @media (min-width: 32.5em) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .page-wrapper {
+        width: 80%;
+    }
+
     main {
         padding: 0;
         border-radius: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
-        width: 90%;
         box-shadow: 0px 0px 0px hsla(166, 100%, 37%, .1),
             0px 0px 10px hsla(166, 100%, 37%, .1),
             0 0px 0px hsla(166, 100%, 37%, 0.1),
@@ -174,7 +175,7 @@ button {
 }
 
 @media (min-width: 64em) {
-    main {
-        width: 53%;
+    .page-wrapper {
+        width: 52%;
     }
 }
