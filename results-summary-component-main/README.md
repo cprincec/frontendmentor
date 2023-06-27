@@ -18,11 +18,8 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- Mobile-first workflow
-- Responsive layout technique (media queries)
+- Semantic HTML5
+- CSS
 - JavaScript
 
 ## Author
