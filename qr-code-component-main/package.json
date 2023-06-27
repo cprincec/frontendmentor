@@ -1,0 +1,22 @@
+{
+  "name": "qr-code-component",
+  "version": "1.0.0",
+  "description": "![Design preview for the QR code component coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cprincec/frontendmentor.git"
+  },
+  "author": "Prince Chukwu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cprincec/frontendmentor/issues"
+  },
+  "homepage": "https://github.com/cprincec/frontendmentor#readme",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
