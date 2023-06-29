@@ -30,14 +30,24 @@ p {
     display: grid;
     grid-template-rows: 1fr 50px;
     height: 100%;
+    animation: flyin 1s linear;
+}
+
+
+@keyframes flyin {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
 main {
     display: grid;
-    /* grid-template-rows: 3fr 1fr 1fr 4fr; */
     align-items: center;
-    /* column-gap: 2rem; */
     padding: 2rem;
     background-color: white;
 }
