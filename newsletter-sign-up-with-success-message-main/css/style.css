@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: hsl(234, 29%, 20%);
+}
+
+main {
+    background-color: white;
+    ;
+}
+
+footer {
+    padding: .5rem;
+    color: hsl(4, 100%, 67%);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-weight: 200;
+}
+
+.second-section {
+    padding: 2rem;
+    display: grid;
+    row-gap: 1.1rem;
+}
+
+ul {
+    list-style: none;
+    margin-top: .5rem;
+}
+
+li {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+li::before {
+    content: url("../assets/images/icon-list.svg");
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: .1rem;
+}
+
+li:last-of-type::before {
+    margin-top: -.1rem;
+}
+
+form {
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.form-box {
+    display: grid;
+    row-gap: .5rem;
+}
+
+label {
+    font-weight: 600;
+    position: relative;
+}
+
+label>span {
+    display: none;
+}
+
+input {
+    padding: 1.1rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+div.error span {
+    display: inline;
+    position: absolute;
+    right: 0;
+    color: hsl(4, 100%, 67%);
+    font-weight: 100;
+}
+
+div.error input {
+    background-color: hsla(4, 100%, 67%, .2);
+    color: hsl(4, 100%, 67%);
+    border: 1px solid hsl(4, 100%, 67%);
+}
+
+button {
+    border-radius: .5rem;
+    padding: 1.3rem 0;
+    border: none;
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.05rem;
+    font-weight: 400;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, hsl(4, 100%, 67%), hsla(29, 87%, 50%, 0.9));
+}
+
+@media (min-width: 32.5em) {
+    body {
+        font-size: 5px;
+        height: 100vh;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) 300px;
+        border-radius: 1rem;
+        padding: 1rem;
+        column-gap: 1rem;
+    }
+
+    li::before {
+        margin-top: -.2rem;
+    }
+
+    input {
+        padding: .75rem;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 1rem 0;
+        font-size: .75rem;
+        letter-spacing: 0;
+    }
+
+    .second-section {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        row-gap: .5rem;
+        align-items: center;
+        padding-right: 3rem;
+        padding: 2rem;
+    }
+
+    h1 {
+        font-weight: 900;
+    }
+
+    h3 {
+        max-width: 300px;
+    }
+}
