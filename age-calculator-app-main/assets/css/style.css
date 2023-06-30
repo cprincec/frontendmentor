@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: grid;
+    grid-template-rows: 1fr 50px;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    height: fit-content;
+    margin: auto 1rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 2rem 2rem 6rem 2rem;
+    display: grid;
+    row-gap: 2rem;
+    z-index: 0;
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    column-gap: 1rem;
+}
+
+form.error,
+form.error label {
+    color: hsl(0, 100%, 67%);
+}
+
+form.error input {
+    border-color: hsl(0, 100%, 67%);
+}
+
+.error-message {
+    font-size: small;
+    visibility: hidden;
+}
+
+span.visible {
+    visibility: visible;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: .3rem;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: medium;
+    color: hsl(0, 1%, 44%);
+}
+
+input {
+    padding: .65rem .75rem;
+    font-weight: 800;
+    color: hsl(0, 0%, 8%);
+    font-size: 1.3rem;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: .5rem;
+}
+
+.form-box input:focus {
+    border-color: hsl(259, 100%, 65%);
+}
+
+.divider {
+    position: relative;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+picture {
+    grid-column: 2/3;
+    width: 60px;
+    display: block;
+    margin: auto;
+    background: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background .3s ease-out;
+    -webkit-tap-highlight-color: transparent;
+}
+
+picture:hover {
+    background: hsl(0, 100%, 67%);
+}
+
+picture::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 50%;
+    width: 100%;
+    height: 1px;
+    background-color: hsl(0, 0%, 86%);
+    z-index: -1;
+}
+
+.output-area {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.output-area p {
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.output-area span {
+    color: hsl(259, 100%, 65%);
+    font-size: 3rem;
+}
+
+.flyin {
+    animation: flyin 1s ease-in-out;
+}
+
+@keyframes flyin {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+@media (min-width: 32.5em) {
+    body {
+        font-size: 18px;
+        grid-template-columns: repeat(12, minmax(50px, 1fr));
+    }
+
+    main {
+        max-width: 550px;
+        row-gap: 0;
+        border-radius: 1rem 1rem 10rem 1rem;
+        padding: 3rem 2rem;
+        align-self: center;
+        margin: 0;
+        grid-column: 3/11;
+        justify-self: center;
+    }
+
+    footer {
+        grid-row: 2/3;
+        grid-column: 1/-1;
+    }
+
+    form {
+        margin-right: 7rem;
+    }
+
+    .divider {
+        margin-bottom: .5rem;
+    }
+
+    picture {
+        margin-right: 0;
+    }
+
+    .output-area {
+        font-size: 4rem;
+    }
+
+    .output-area p {
+        line-height: 1.1;
+    }
+
+    .output-area span {
+        font-size: 4.5rem;
+    }
+
+    @keyframes flyin {
+        from {
+            transform: translateX(-200%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
+    }
+}
+
+
+@media (min-width: 64em) {
+    main {
+        grid-column: 4/10;
+        justify-self: auto;
+        margin: auto;
+        width: 100%;
+    }
+
+    main {
+        max-width: 670px;
+    }
+
+    .output-area {
+        font-size: 4.7rem;
+    }
+
+    .output-area span {
+        font-size: 5.3rem;
+    }
+}
