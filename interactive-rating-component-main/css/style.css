@@ -174,7 +174,6 @@ h2 {
         padding-right: 0;
         max-width: 55px;
         transition: .5s;
-        -webkit-tap-highlight-color: transparent;
     }
 
     li:hover {
