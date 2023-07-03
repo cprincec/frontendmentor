@@ -1,6 +1,6 @@
-# Frontend Mentor - Age calculator app
+# Frontend Mentor - Interactive rating component
 
-![Design preview for the Age calculator app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
 
@@ -17,20 +17,17 @@ Thanks for checking out this front-end coding challenge.
 
 ### Links
 
--   Solution URL: [https://github.com/cprincec/frontendmentor/tree/main/age-calculator-app-main]
--   Live Site URL: [https://cprincec.github.io/frontendmentor/age-calculator-app-main]
+-   Solution URL: [https://github.com/cprincec/frontendmentor/tree/main/interactive-rating-component-main]
+-   Live Site URL: [https://cprincec.github.io/frontendmentor/interactive-rating-component-main]
 
 ### Built with
 
 -   Semantic HTML5 markup
 -   CSS custom properties
--   Flexbox
 -   Grid
 -   Mobile-first workflow
 -   Responsive layout technique (media queries)
 -   JavaScript
--   JavaScript Date object
--   Animation
 
 ## Author
 
