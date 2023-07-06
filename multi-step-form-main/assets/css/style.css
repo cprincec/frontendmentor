@@ -31,6 +31,10 @@ main {
     grid-template-rows: 25vh;
 }
 
+h2 {
+    color: hsl(213, 96%, 18%);
+}
+
 nav {
     background-image: url(../images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
