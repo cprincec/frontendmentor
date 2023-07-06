@@ -12,7 +12,7 @@ body {
     grid-template-rows: 1fr 20px;
     align-content: space-between;
     min-height: 100vh;
-    background-color: hsl(206, 94%, 87%);
+    background-color: hsl(217, 100%, 97%);
 }
 
 img {
@@ -154,42 +154,6 @@ input {
     outline: none;
     border: 1px solid hsl(231, 11%, 63%);
 }
-
-/* input.invalid {
-    border-color: hsl(354, 84%, 57%);
-}
-
-input:valid {
-    background-color: hsl(0, 0%, 100%) !important;
-}
-
-input:focus {
-    border-color: hsl(213, 96%, 18%);
-}
-
-
-input[type="checkbox"]:checked:disabled {
-    background-color: red !important;
-} */
-
-/* input:checked {
-    background-color: hsl(243, 100%, 62%);
-    width: 30px !important;
-    height: 30px !important;
-    margin: 5px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    outline: 2px solid lightblue;
-    box-shadow: none;
-    font-size: 2em;
-    /* color: red;
-    background-color: red;
-    border: 2px solid red;
-    accent-color: red; */
-/* filter: invert(100%) hue-rotate(18deg) brightness(1.7) grayscale(0%); */
-/* } */
 
 .buttons {
     background-color: hsl(0, 0%, 100%);
