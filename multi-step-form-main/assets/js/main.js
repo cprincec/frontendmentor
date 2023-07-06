@@ -75,8 +75,12 @@ function handlePersonalFormSubmission(e) {
     personalFormFields.forEach((field, index) => {
         if (!field.checkValidity()) {
             if (!field.validity.valueMissing) {
-                errorFields[index].textContent = field.validationMessage;
+                errorFields[index].textContent = `Invalid ${
+                    field.id.charAt(0).toUpperCase() + field.id.substring(1)
+                }`;
             }
+
+            
             invalidCount++;
             errorFields[index].classList.add("display");
             field.classList.add("invalid");
