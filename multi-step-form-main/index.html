@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="https://cprincec.github.io/wdd230/images/ProfilePhoto.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Frontend Mentor | Multi-step form</title>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <nav>
+      <ul>
+        <li>
+          <div class="circle active">1</div>
+          <p class="step-num">Step 1</p>
+          <p class="stop-desc">Your info</p>
+        </li>
+        <li class="">
+          <div class="circle">2</div>
+          <p class="step-num">Step 2</p>
+          <p class="stop-desc">Select plan</p>
+        </li>
+        <li class="">
+          <div class="circle">3</div>
+          <p class="step-num">Step 3</p>
+          <p class="stop-desc">Add-ons</p>
+        </li>
+        <li class="">
+          <div class="circle">4</div>
+          <p class="step-num">Step 4</p>
+          <p class="stop-desc">Summary</p>
+        </li>
+      </ul>
+    </nav>
+    <div id="forms" class="forms">
+      <form class="active-form" novalidate>
+        <div class="form-main personal-info">
+          <h2>Personal info</h2>
+          <p class="section-desc">Please provide your name, email address, and phone number.</p>
+          <div class="form-box">
+            <label for="name">Name <span class="invalid">Name is required</span></label>
+            <input type="text" id="name" class="name" required placeholder="e.g. Stephen King">
+          </div>
+          <div class="form-box">
+            <label for="email">Email Address <span class="invalid">Email is required</span></label>
+            <input type="email" id="email" class="email" required placeholder="e.g. stephenking@lorem.com">
+          </div>
+          <div class="form-box">
+            <label for="phone">Phone Number <span class="invalid">Phone No. is required</span></label>
+            <input type="text" id="phone" class="phone" required placeholder="e.g. +1 234 567 890">
+          </div>
+        </div>
+        <div class="buttons first-button">
+          <button type="button" class="next">Next Step</button>
+        </div>
+      </form>
+
+
+      <form novalidate>
+        <div class="form-main">
+          <h2>Select your plan</h2>
+          <p class="section-desc">You have the option of monthly or yearly billing.</p>
+
+          <div class="plan-selection"></div>
+
+          <p class="monthly-yearly">
+            <span id="monthly" class="monthly-toggle duration plan-interval">Monthly</span>
+            <span class="toggle"><span class="toggle-bar yearly"></span></span>
+            <span id="yearly" class="yearly-toggle duration">Yearly</span>
+          </p>
+
+        </div>
+
+        <div class="buttons">
+          <a href="" class="previous">Go Back</a>
+          <button type="submit" class="next">Next Step</button>
+        </div>
+
+      </form>
+
+
+      <form novalidate>
+        <div class="form-main">
+          <h2>Pick add-ons</h2>
+          <p class="section-desc">Add-ons help enhance your gaming experience.</p>
+
+          <div class="pick-add-ons"></div>
+
+        </div>
+        <div class="buttons">
+          <a href="#" class="previous">Go Back</a>
+          <button type="submit" class="next">Next Step</button>
+        </div>
+      </form>
+
+      <form>
+        <div class="form-main finishing-up">
+          <h2>Finishing up</h2>
+          <p class="section-desc">Double-check everyting looks OK before confirming.</p>
+          <div class="form-summary">
+          </div>
+          <div class=" total"><span class="desc">Total (per month)</span><span class="amount">$0/mo</span>
+          </div>
+
+        </div>
+        <div class="buttons">
+          <a href="#" class="previous">Go Back</a>
+          <button type="button" class="confirm">Confirm</button>
+        </div>
+      </form>
+
+      <section class="thank-you">
+        <div class="form-main">
+          <picture><img src="./assets/images/icon-thank-you.svg" alt="Checkmark"></picture>
+          <h2>Thank you</h2>
+          <p>
+            Thanks for confirming your subscription! We hope you have fun
+            using our platform. If you ever need support, please feel free
+            to email us at chukwuprincec@gmail.com.</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Prince Chukwu</a>.
+  </footer>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
