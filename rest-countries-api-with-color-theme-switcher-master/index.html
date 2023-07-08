@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cprincec.github.io/wdd230/images/ProfilePhoto.jpg">
+    <title>Rest Countries API</title>
+    <!-- <link rel="stylesheet" href="./dist/style.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/ca3dd33047.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="./">Where in the world?</a></h1>
+        <a href="#">
+            <i class="moon fa-solid fa-moon"></i><span class="mode-name">Dark Mode</span>
+        </a>
+    </header>
+    <nav>
+        <form action="#" class="search-container">
+            <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" name="search" id="search" class="search" placeholder="Search for a country...">
+            <div class="suggestion-container"></div>
+        </form>
+        <div class="filter-container">
+            <select id="dropdown" name="dropdown">
+                <option value="" disabled selected>Filter by Region</option>
+                <option value="africa">Africa</option>
+                <option value="americas">Americas</option>
+                <option value="asia">Asia</option>
+                <option value="europe">Europe</option>
+                <option value="oceania">Oceania</option>
+            </select>
+        </div>
+    </nav>
+    <main>
+        <div class="results-info">
+            <div class="results-count"></div>
+            <span class="page info-bold">Pages:</span>
+            <div class="pagination"></div>
+        </div>
+        <div class="container"></div>
+        <div class="country-details-main"></div>
+    </main>
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Prince Chukwu</a>.
+        </div>
+    </footer>
+    <script src="./js/main.js" type="module"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/country-details.js" type="module"></script>
+</body>
+
+</html>
