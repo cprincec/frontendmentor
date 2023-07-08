@@ -432,11 +432,6 @@ footer {
         scale: 1.05;
     }
 
-    .card-info {
-        /* margin-top: .5rem;
-        padding-bottom: .75rem; */
-    }
-
     .country-details-main .card-info {
         row-gap: 0;
     }
