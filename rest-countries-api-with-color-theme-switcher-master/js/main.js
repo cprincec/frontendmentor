@@ -120,7 +120,7 @@ function buildCountryCard(country) {
     return ` <div id="${country.name.common}" class="country-card">
             <picture><img src="${country.flags.svg}" alt="${
         country.name.common
-    } flag" loading="lazy"></picture>
+    } flag" ></picture>
             <section class="card-info">
                 <h2>${country.name.common}</h2>
                 <div class="info-div">
