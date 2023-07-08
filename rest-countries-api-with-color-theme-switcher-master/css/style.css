@@ -403,6 +403,10 @@ footer {
         grid-row: 1/2;
     }
 
+    .moon {
+        margin-right: .2rem;
+    }
+
     footer {
         grid-row: 4/5;
     }
