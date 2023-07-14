@@ -260,7 +260,7 @@ footer {
     justify-items: flex-end;
   }
 
-  li a::after {
+  /* li a::after {
     content: "";
     display: block;
     height: 3px;
@@ -269,7 +269,7 @@ footer {
   }
 
   li:hover a::after {
-    animation: underline .5s forwards;
+    animation: underline 2s forwards;
   }
 
   @keyframes underline {
@@ -282,7 +282,29 @@ footer {
       width: 100%;
       background-color: var(--bg-color-sec);
     }
+  } */
+
+  li a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: var(--bg-color-tertiary);
+    transition: width 0.5s, background-color 0.5s;
   }
+
+  li:hover a::after {
+    width: 100%;
+    background-color: var(--bg-color-sec);
+  }
+
+  li:not(:hover) a::after {
+    width: 0%;
+    background-color: var(--bg-color-tertiary);
+  }
+
+
+
 
   main {
     display: grid;
