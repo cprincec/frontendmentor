@@ -1,21 +1,20 @@
 import { useState } from "react";
 import "../css/comment.module.css";
-import avatars from "../images/avatars";
+
 import backArrow from "../images/icon-reply.svg";
 import minusIcon from "../images/icon-minus.svg";
 import plusIcon from "../images/icon-plus.svg";
 
 function Comment({ comment }) {
+    const imgPath = require(`../images/avatars/image-${comment.user.username}.png`);
     // const [isReply, setIsReply] = useState(false);
     console.log(comment.user.image);
+    // const imgPath = "../images/avatars/";
     return (
         <li id={comment.id} className="comment">
             <section className="single-comment rounded">
                 <picture>
-                    <img
-                        src={`${avatars}/image-${comment.user.username}.png`}
-                        alt={comment.user.username}
-                    />
+                    <img src={imgPath} alt={comment.user.username} />
                 </picture>
                 <h2>{comment.user.username}</h2>
                 <span className="created-at">{comment.createdAt}</span>
@@ -43,10 +42,7 @@ function Comment({ comment }) {
                             className="single-comment reply rounded"
                         >
                             <picture>
-                                <img
-                                    src={reply.user.image.png}
-                                    alt={reply.user.username}
-                                />
+                                <img src={imgPath} alt={reply.user.username} />
                             </picture>
                             <h2>{reply.user.username}</h2>
                             <span className="created-at">

@@ -21,10 +21,6 @@ img {
   width: 100%;
 }
 
-/* picture {
-  display: block;
-} */
-
 body {
   background-color: var(--accent-5);
   font-size: 16px;
@@ -43,17 +39,17 @@ button {
   margin: 1rem 0;
 }
 
+h2 {
+  font-size: 1.3rem;
+  color: var(--accent-2)
+}
+
 .single-comment {
   background-color: var(--accent-6);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
-}
-
-.single-comment p {
-  /* grid-column: 1/-1;
-  grid-row: 2/3; */
 }
 
 .single-comment picture {
@@ -67,11 +63,10 @@ button {
 
 }
 
-.single-comment h2,
-.created-at {}
-
-.created-at {
-  margin-top: .3rem;
+.created-at,
+.single-comment p {
+  font-size: 1.1rem;
+  color: var(--accent-3);
 }
 
 .votes {
@@ -80,46 +75,54 @@ button {
   display: grid;
   grid-template-columns: 32% 36% 32%;
   justify-items: center;
-  width: 100px;
+  width: 110px;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 .votes span {
-  padding: .75rem .5rem;
+  padding: .6rem .3rem;
 
 }
 
 .votes button {
-  padding: .75rem 1rem;
+  cursor: pointer;
 }
 
 .votes img {
-  background-color: red;
-  z-index: 99;
-  font-size: 10rem;
+  width: .85rem;
 }
 
+.votes button:nth-child(1) img {
+  margin-left: .3rem;
+}
 
-
-
-
-/* .comment {
-  background-color: var(--bg-2);
-  display: grid;
-
-} */
+.votes button:nth-child(2) img {
+  margin-right: .3rem;
+}
 
 .replies {
   display: grid;
   row-gap: 1rem;
   margin-top: 1rem;
   padding-left: 1rem;
-  border-left: 1px solid var(--accent-3);
+  border-left: 1px solid var(--tertiary);
 }
 
+.reply-btn {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: right;
+  flex: 1 1 50%;
+}
 
-
-.reply {
-  margin: 0;
+.reply-btn img {
+  width: 1rem;
 }
 
 form {
@@ -131,6 +134,12 @@ form {
 textarea {
   grid-column: 1/-1;
   padding: 1rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.1rem;
+  border-radius: .3rem;
+  border: 1px solid var(--accent-4);
+  color: var(--secondary);
+
 }
 
 .send {
