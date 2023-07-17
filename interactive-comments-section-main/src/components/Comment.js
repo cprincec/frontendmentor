@@ -13,7 +13,7 @@ function Comment({ comment }) {
             <section className="single-comment rounded">
                 <picture>
                     <img
-                        src={comment.user.image.webp}
+                        src={comment.user.image.png}
                         alt={comment.user.username}
                     />
                 </picture>
