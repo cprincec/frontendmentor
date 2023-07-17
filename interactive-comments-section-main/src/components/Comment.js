@@ -6,16 +6,16 @@ import minusIcon from "../images/icon-minus.svg";
 import plusIcon from "../images/icon-plus.svg";
 
 function Comment({ comment }) {
-    const imgPath = require(`../images/avatars/image-${comment.user.username}.png`);
-    // const replyImgPath = require(`../images/avatars/image-${comment.replies.user.username}`);
-
-    console.log(comment.replies);
+    console.log(comment);
 
     return (
         <li id={comment.id} className="comment">
             <section className="single-comment rounded">
                 <picture>
-                    <img src={imgPath} alt={comment.user.username} />
+                    <img
+                        src={comment.user.image.webp}
+                        alt={comment.user.username}
+                    />
                 </picture>
                 <h2>{comment.user.username}</h2>
                 <span className="created-at">{comment.createdAt}</span>
@@ -43,10 +43,10 @@ function Comment({ comment }) {
                             className="single-comment reply rounded"
                         >
                             <picture>
-                                {/* <img
-                                    src={replyImgPath}
+                                <img
+                                    src={reply.user.image.png}
                                     alt={reply.user.username}
-                                /> */}
+                                />
                             </picture>
                             <h2>{reply.user.username}</h2>
                             <span className="created-at">

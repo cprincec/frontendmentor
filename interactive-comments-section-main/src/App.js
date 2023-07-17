@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Comment from "./components/Comment";
 import Form from "./components/Form";
-import data from "./data.json";
-const url = "./data.json";
-
+const url =
+    "https://raw.githubusercontent.com/cprincec/frontendmentor/main/interactive-comments-section-main/src/data.json";
 function App() {
     const [commentList, setCommentList] = useState([]);
     const [currentUser, setCurrentUser] = useState("");
@@ -13,7 +12,7 @@ function App() {
     useEffect(function () {
         async function fetchData() {
             try {
-                const result = await fetch("./data.json");
+                const result = await fetch(url);
                 if (result.ok) {
                     const data = await result.json();
                     setCommentList([...data.comments]);

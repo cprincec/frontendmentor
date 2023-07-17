@@ -1,4 +1,4 @@
-import image from "../images/avatars/image-juliusomo.png";
+// import image from "../images/avatars/image-juliusomo.png";
 
 function Form({ user }) {
     console.log(user);
@@ -8,7 +8,7 @@ function Form({ user }) {
             <button className="send">Send</button>
             {user && (
                 <picture>
-                    <img src={image} alt={user.username} />
+                    <img src={user.image.png} alt={user.username} />
                 </picture>
             )}
         </form>
