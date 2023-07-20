@@ -1,14 +1,37 @@
-// import image from "../images/avatars/image-juliusomo.png";
-
-function Form({ user }) {
-    console.log(user);
+import { useEffect } from "react";
+function Form({
+    currentUser,
+    addComment,
+    textAreaRef,
+    formText,
+    updateFormHandler,
+    userReplyingTo,
+    isReplying,
+}) {
+    useEffect(() => {
+        if (isReplying) {
+            // Focus on the textarea when isReplying is true
+            textAreaRef.current.focus();
+        }
+    }, [isReplying]);
     return (
-        <form className="rounded">
-            <textarea placeholder="Add a comment"></textarea>
-            <button className="send">Send</button>
-            {user && (
+        <form className="rounded" onSubmit={addComment} noValidate>
+            <textarea
+                required
+                ref={textAreaRef}
+                placeholder="Add a comment..."
+                onChange={updateFormHandler}
+                value={formText}
+            ></textarea>
+            <button className="send">
+                {userReplyingTo ? "Reply" : "Send"}
+            </button>
+            {currentUser && (
                 <picture>
-                    <img src={user.image.png} alt={user.username} />
+                    <img
+                        src={currentUser.image.png}
+                        alt={currentUser.username}
+                    />
                 </picture>
             )}
         </form>

@@ -40,24 +40,30 @@ button {
 }
 
 h2 {
-  font-size: 1.3rem;
-  color: var(--accent-2)
+  font-size: 1.1rem;
+  color: var(--accent-2);
+  font-weight: 500;
 }
 
 .single-comment {
   background-color: var(--accent-6);
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  row-gap: 1rem;
+  column-gap: .5rem;
   align-items: center;
 }
 
+.single-comment p {
+  flex: 1 1 100%;
+}
+
 .single-comment picture {
-  max-width: 40px;
+  max-width: 35px;
 }
 
 .rounded {
-  border-radius: .5rem;
+  border-radius: .6rem;
   padding: 1rem;
   background-color: var(--accent-6);
 
@@ -65,20 +71,24 @@ h2 {
 
 .created-at,
 .single-comment p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--accent-3);
+}
+
+p {
+  letter-spacing: -.1px;
 }
 
 .votes {
   background-color: var(--accent-5);
   border-radius: .75rem;
   display: grid;
-  grid-template-columns: 32% 36% 32%;
+  grid-template-columns: 34% 32% 34%;
   justify-items: center;
-  width: 110px;
+  width: 6rem;
   color: var(--primary);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .votes span {
@@ -106,14 +116,16 @@ h2 {
   display: grid;
   row-gap: 1rem;
   margin-top: 1rem;
+  margin-left: 1rem;
   padding-left: 1rem;
   border-left: 1px solid var(--tertiary);
 }
 
-.reply-btn {
+.reply-btn,
+.delete-edit {
   color: var(--primary);
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
   gap: .5rem;
   align-items: center;
@@ -125,10 +137,56 @@ h2 {
   width: 1rem;
 }
 
+.delete img {
+  margin-bottom: .1rem;
+}
+
+.you {
+  background-color: var(--primary);
+  color: var(--accent-6);
+  padding: .1rem .4rem;
+  font-size: .75rem;
+  font-weight: 500;
+  border-radius: .1rem;
+}
+
+.you {
+  padding-bottom: .2rem;
+}
+
+.delete-edit {
+  gap: 1.5rem;
+
+}
+
+.delete-edit button {
+  display: flex;
+  align-items: center;
+  column-gap: .3rem;
+  font-size: 1.05rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.delete-edit .delete {
+  color: var(--secondary);
+}
+
+.comment-delete .reply-btn {
+  flex: 0 1 auto;
+}
+
+.replying-to {
+  color: var(--primary);
+  font-weight: 500;
+}
+
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1rem;
+  margin-top: .5rem;
+  width: 100%;
 }
 
 textarea {
@@ -137,9 +195,31 @@ textarea {
   font-family: 'Rubik', sans-serif;
   font-size: 1.1rem;
   border-radius: .3rem;
-  border: 1px solid var(--accent-4);
-  color: var(--secondary);
+  border: 2px solid var(--accent-4);
+  color: var(--accent-3);
+  resize: vertical;
+  outline: none;
+}
 
+form textarea:focus {
+  border: 2px solid var(--primary);
+}
+
+.update-form {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.update-form textarea {
+  flex: 1 1 100%;
+  height: auto;
+  min-height: 150px;
+}
+
+.update-form button {
+  justify-self: flex-end;
 }
 
 .send {
@@ -152,4 +232,215 @@ form picture {
   grid-row: 2/3;
   align-self: center;
   justify-self: flex-start;
+  max-width: 40px;
+}
+
+form button {
+  background-color: var(--primary);
+  color: var(--accent-6);
+  align-self: center;
+  justify-self: flex-end;
+  padding: .75rem 1.75rem;
+  font-size: 1rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+}
+
+
+#dialogs>div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.backdrop {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  overflow-y: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.dialog {
+  background-color: var(--accent-6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: .5rem;
+  border: none;
+  margin: auto;
+  max-height: 80vh;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-3);
+}
+
+.dialog>div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.dialog h3 {
+  font-weight: 500;
+  color: var(--accent-2);
+}
+
+.dialog button {
+  background-color: var(--secondary);
+  align-self: center;
+  padding: .75rem 1.2rem;
+  border-radius: .5rem;
+  color: var(--accent-6);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.dialog button.cancel {
+  background-color: var(--accent-3);
+}
+
+
+.you-at {
+  display: flex;
+  gap: 1rem;
+  margin-left: .5rem;
+  align-items: center;
+
+
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .5;
+}
+
+@media screen and (min-width: 32.5em) {
+
+  .single-comment p {
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+
+  .App {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .dialog {
+    max-width: 50%;
+  }
+
+  /* .dialog button {
+    padding: .75rem 1.2rem;
+  } */
+
+  .single-comment {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    row-gap: .5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.3rem;
+  }
+
+  .replies .single-comment {
+
+    /* height: 120px; */
+  }
+
+  .votes {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    transform: rotate(90deg);
+    margin: 0 -.7rem;
+    /* width: auto; */
+  }
+
+  .replies .votes,
+  .user-single-comment .votes {
+    width: auto;
+    margin: 1.7rem -.7rem;
+  }
+
+  .user-single-comment.single-comment p {
+    align-self: flex-start;
+  }
+
+  .votes>* {
+    transform: rotate(-90deg);
+    padding: .5rem;
+  }
+
+  .main-comment {
+    grid-column: 2/12;
+    grid-row: 2/3;
+  }
+
+  .reply-btn {
+    grid-column: span 1/-1;
+  }
+
+  .you-at {
+    grid-column: 4 / span 6;
+    grid-row: 1/2;
+  }
+
+  .comments-container {
+    row-gap: 1.5rem;
+  }
+
+  .delete-edit {
+    grid-column: span 1 / -1;
+    padding-right: 1rem;
+  }
+
+  .replies {
+    margin-left: 2rem;
+    padding-left: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  form.rounded {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 10fr 2fr;
+  }
+
+  form.rounded textarea {
+    grid-column: 2/3;
+  }
+
+  form.rounded picture {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  form.rounded>button {
+    grid-row: 1.2;
+    grid-column: 3/4;
+  }
+
+}
+
+@media screen and (min-width:64em) {
+  .dialog {
+    max-width: 350px;
+  }
 }
