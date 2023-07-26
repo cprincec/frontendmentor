@@ -1,14 +1,7 @@
 import Header from "./Header";
 import NavContext from "../context/nav";
 import DataContext from "../context/pageData";
-import {
-    useState,
-    useReducer,
-    useCallback,
-    useEffect,
-    useContext,
-} from "react";
-import s from "../assets/home/background-home-mobile.jpg";
+import { useState, useReducer, useCallback, useEffect } from "react";
 
 const initialDataFetchState = {
     data: null,

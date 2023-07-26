@@ -39,7 +39,7 @@ const Header = () => {
                             ? "animate-slide-in grid"
                             : "hidden"
                     } 
-                     grid-rows-[45px_92%] gap-y-[1.5rem] w-[70%] absolute right-0 top-0 min-h-[100%] z-[0]
+                    md:animate-none grid-rows-[45px_92%] gap-y-[1.5rem] w-[70%] absolute right-0 top-0 min-h-[100%] z-[0]
                     py-4 md:block md:min-h-[auto] md:static md:justify-self-end md:p-[0] backdrop-blur-[25px] md:bg-h-grey md:px-[5rem]`}
                 >
                     <button
