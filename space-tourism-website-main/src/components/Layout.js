@@ -76,12 +76,30 @@ const Layout = ({ children }) => {
     return (
         <>
             <div
-                className={`App z-[0] text-grey flex flex-col ${
+                className={`App z-[0] text-grey flex flex-col relative ${
                     window.location.href.includes("destination")
                         ? "bg-[url('../assets/destination/background-destination-mobile.jpg')]"
                         : window.location.href.includes("crew")
                         ? "bg-[url('../assets/crew/background-crew-mobile.jpg')]"
+                        : window.location.href.includes("technology")
+                        ? "bg-[url('../assets/technology/background-technology-mobile.jpg')]"
                         : "bg-[url('../assets/home/background-home-mobile.jpg')]"
+                }${
+                    window.location.href.includes("destination")
+                        ? " md:bg-[url('../assets/destination/background-destination-tablet.jpg')]"
+                        : window.location.href.includes("crew")
+                        ? " md:bg-[url('../assets/crew/background-crew-tablet.jpg')]"
+                        : window.location.href.includes("technology")
+                        ? " md:bg-[url('../assets/technology/background-technology-tablet.jpg')]"
+                        : " md:bg-[url('../assets/home/background-home-tablet.jpg')]"
+                } ${
+                    window.location.href.includes("destination")
+                        ? "lg:bg-[url('../assets/destination/background-destination-desktop.jpg')]"
+                        : window.location.href.includes("crew")
+                        ? "lg:bg-[url('../assets/crew/background-crew-desktop.jpg')]"
+                        : window.location.href.includes("technology")
+                        ? "lg:bg-[url('../assets/technology/background-technology-desktop.jpg')]"
+                        : "lg:bg-[url('../assets/home/background-home-desktop.jpg')]"
                 }`}
             >
                 <NavContext.Provider value={navCxtValue}>
@@ -89,7 +107,14 @@ const Layout = ({ children }) => {
                 </NavContext.Provider>
 
                 <DataContext.Provider value={dataCtxValue}>
-                    <main className="flex-1">{children}</main>
+                    <main
+                        onClick={() => {
+                            showNav && toggleNav();
+                        }}
+                        className="flex-1 md:grid"
+                    >
+                        {children}
+                    </main>
                 </DataContext.Provider>
             </div>
         </>
