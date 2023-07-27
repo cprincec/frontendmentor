@@ -54,7 +54,7 @@ const Header = () => {
                                 to="/"
                                 style={StyleActiveLink}
                                 className="
-                                block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1rem] md:px-[0] md:pt-[1.5rem] md:text-center"
+                                block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1.5rem] md:px-[0] md:pt-[2rem] md:text-center lg:text-sm"
                                 onClick={NavCtx.toggleNav}
                                 end
                             >
@@ -65,7 +65,7 @@ const Header = () => {
                             <NavLink
                                 to="/destination"
                                 style={StyleActiveLink}
-                                className="block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1rem] md:px-[0] md:pt-[1.5rem] md:text-center"
+                                className="block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1.5rem] md:px-[0] md:pt-[2rem] md:text-center lg:text-sm"
                                 onClick={NavCtx.toggleNav}
                                 end
                             >
@@ -77,7 +77,7 @@ const Header = () => {
                             <NavLink
                                 to="/crew"
                                 style={StyleActiveLink}
-                                className="block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1rem] md:px-[0] md:pt-[1.5rem] md:text-center"
+                                className="block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1.5rem] md:px-[0] md:pt-[2rem] md:text-center lg:text-sm"
                                 onClick={NavCtx.toggleNav}
                                 end
                             >
@@ -88,7 +88,7 @@ const Header = () => {
                             <NavLink
                                 to="/technology"
                                 style={StyleActiveLink}
-                                className="block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1rem] md:px-[0] md:pt-[1.5rem] md:text-center "
+                                className="block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1.5rem] md:px-[0] md:pt-[2rem] md:text-center lg:text-sm"
                                 onClick={NavCtx.toggleNav}
                                 end
                             >

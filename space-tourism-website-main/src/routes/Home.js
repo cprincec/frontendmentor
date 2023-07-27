@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
     return (
         <section className="lg:w-[100%] grid grid-rows-[auto_auto_auto_1fr] lg:grid-rows-[repeat(3, auto)] gap-y-[2rem] justify-center items-center  text-center px-[1.5rem] mt-[1rem] min-h-[100%] md:mt-[3rem] lg:gap-0 lg:grid-cols-[60%_40%] lg:justify-start lg:text-left lg:max-w-[80%] lg:mx-auto lg:mt-[7rem]">
@@ -14,10 +16,13 @@ const Home = () => {
                 of this world experience!
             </p>
             <div className="self-stretch grid items-center justify-center mt-[2rem] lg:col-[2/3] lg:row-[1/4] lg:self-end">
-                <div className="hover:bg-dark-grey rounded-full p-[2rem] transition-bg duration-[.5s] ease">
-                    <button className="rounded-full border-0 bg-gold w-[130px] md:w-[200px] h-[130px] md:h-[200px] font-serif text-black text-[1.2em] md:text-[1.75em] ">
+                <div className="hover:bg-dark-grey rounded-full md:p-[80px_40px] transition-bg duration-[.5s] ease">
+                    <Link
+                        to="/destination"
+                        className="rounded-full border-0 bg-gold p-[60px_30px] md:p-[80px_40px] font-serif text-black text-[1.2em] md:text-[1.75em] "
+                    >
                         EXPLORE
-                    </button>
+                    </Link>
                 </div>
             </div>
         </section>

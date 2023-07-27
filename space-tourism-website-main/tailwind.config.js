@@ -35,7 +35,7 @@ module.exports = {
             grey: "#D0D6F9",
             gold: "#FFFFFF",
             "dark-grey": "#5a5a5a",
-            "h-grey": "#161313",
+            "h-grey": "hsla(0, 0%, 100%, .04)",
         },
         fontFamily: {
             sans: ["Barlow Condensed", "sans-serif"],

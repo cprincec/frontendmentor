@@ -33,7 +33,9 @@ const Crew = () => {
             {DataCtx.data.data ? (
                 <div className="mt-[1rem] mb-[2rem] md:mb-[0] md:grid lg:grid-rows-[auto_1fr] lg:w-[75%] lg:mx-auto">
                     <p className="text-sm+ md-text-[28px] tracking-[4.75px] text-center text-gold md:text-left md:px-[3rem] lg:text-left lg:px-0 lg:mt-[3rem]">
-                        <span className="text-dark-grey font-[700]">02</span>{" "}
+                        <span className="text-grey opacity-50 font-[900]">
+                            02
+                        </span>{" "}
                         PICK YOUR CREW
                     </p>
                     <section className="grid justify-center mt-[2rem] text-gold gap-y-[1.75rem] grid-rows-[auto_auto_auto] items-center text-center md:grid-rows-[auto_auto_1fr] md:items-end lg:grid-rows-[3fr_1fr] lg:grid-cols-[1fr_1fr] lg:mt-0">
@@ -75,7 +77,7 @@ const Crew = () => {
                         </ul>
 
                         <article className="text-center flex flex-col gap-[1rem] lg:text-left">
-                            <p className="mt-[1rem] tracking-[.5px] uppercase font-sm text-dark-grey font-[100] font-[serif] md:text-[28px]">
+                            <p className="mt-[1rem] tracking-[.5px] uppercase font-sm text-grey opacity-70 font-[100] font-[serif] md:text-[28px]">
                                 {currentCrew
                                     ? currentCrew.role
                                     : DataCtx.data.data.crew[0].role}

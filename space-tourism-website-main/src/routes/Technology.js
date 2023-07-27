@@ -33,7 +33,9 @@ const Technology = () => {
             {DataCtx.data.data ? (
                 <div className="mt-[1rem] mb-[2rem] lg:ml-[10%] lg:grid lg:grid-rows-[auto_1fr] lg:max-h-[80%] ">
                     <p className="text-sm+ md-text-[28px] tracking-[4.75px] text-center md:px-[3rem] md:text-left lg:px-[0] lg:mt-[0rem]">
-                        <span className="text-dark-grey font-[700]">03</span>{" "}
+                        <span className="text-grey opacity-50 font-[900]">
+                            03{" "}
+                        </span>
                         SPACE LAUNCH 101
                     </p>
                     <section className="grid justify-stretch mt-[2rem] text-gold gap-y-[1.75rem] grid-rows-[auto_auto_auto] items-center text-center lg:grid-cols-[auto_auto_auto] lg:grid-rows-[1fr] lg:gap-[3rem]">
@@ -86,7 +88,7 @@ const Technology = () => {
                         </ul>
 
                         <article className="text-center flex flex-col gap-[1rem] lg:row-[1/2] lg:text-left">
-                            <p className="mt-[1rem] tracking-[.5px] uppercase font-[18px] text-dark-grey font-[100] font-[serif] md:text-sm+">
+                            <p className="mt-[1rem] tracking-[.5px] uppercase font-[18px] text-grey opacity-70 font-[100] font-[serif] md:text-sm+">
                                 THE TERMINOLOGY...
                             </p>
                             <h1 className="text-center uppercase text-[28px] md:text-[55px] leading-[1] font-serif text-gold lg:text-left">

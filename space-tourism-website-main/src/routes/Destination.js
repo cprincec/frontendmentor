@@ -33,7 +33,9 @@ const Destination = () => {
             {DataCtx.data.data ? (
                 <div className="mt-[1rem] mb-[2rem] lg:max-w-[80%] lg:mx-auto lg:mt-[2rem] lg:w-[100%]">
                     <p className="text-sm+ md-text-[28px] tracking-[4.75px] text-center md:text-start md:py-[1rem] md:px-[3rem] text-gold">
-                        <span className="text-dark-grey font-[700]">01</span>{" "}
+                        <span className="text-grey opacity-50 font-[900]">
+                            01
+                        </span>{" "}
                         PICK YOUR DESTINATION
                     </p>
                     <section className="grid justify-center mt-[2rem] text-gold grid gap-y-[1.75rem] grid-rows-[auto_auto_auto] justify-center items-center text-center lg:grid-cols-[1fr_1fr] lg:rows-[auto_auto] lg:justify-items-start">
