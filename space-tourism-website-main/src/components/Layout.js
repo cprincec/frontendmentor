@@ -104,7 +104,7 @@ const Layout = ({ children }) => {
                         onClick={() => {
                             showNav && toggleNav();
                         }}
-                        className="flex-1 md:grid"
+                        className="flex-1 grid"
                     >
                         {children}
                     </main>

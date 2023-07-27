@@ -16,7 +16,7 @@ const Header = () => {
             : undefined;
     };
     return (
-        <header className="text-gold grid grid-flow-col px-6 py-4 overflow-hidden md:px-[3rem]">
+        <header className="text-gold grid grid-flow-col px-6 py-4 overflow-hidden md:px-[3rem_0]">
             <picture className="max-w-[40px] md:max-w-[60px] lg:max-w-[50px] md:mt-[1rem]">
                 <img className="w-full" src={logo} alt="logo" />
             </picture>
@@ -40,7 +40,7 @@ const Header = () => {
                             : "hidden"
                     } 
                     md:animate-none grid-rows-[45px_92%] gap-y-[1.5rem] w-[70%] absolute right-0 top-0 min-h-[100%] z-[0]
-                    py-4 md:block md:min-h-[auto] md:static md:justify-self-end md:p-[0] backdrop-blur-[25px] md:bg-h-grey md:px-[5rem]`}
+                    py-4 md:block md:min-h-[auto] md:static md:justify-self-end md:p-[0] backdrop-blur-[25px] md:bg-h-grey md:px-[2rem] lg:px-[5rem]`}
                 >
                     <button
                         className="justify-self-end align-self-center pr-6 align-self-start z-[1] hover:scale-[1.1] md:hidden"
@@ -54,7 +54,7 @@ const Header = () => {
                                 to="/"
                                 style={StyleActiveLink}
                                 className="
-                                block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1.5rem] md:px-[0] md:pt-[2rem] md:text-center lg:text-sm"
+                                block hover:border-r-4 uppercase tracking-[2.7px] text-[16px] px-[2rem] py-[.2rem] md:hover:border-b-[4px] md:border-r-0 transition-border-b duration-[.2s] md:hover:border-r-[0] md:py-[1.5rem] md:px-[0] md:pt-[2rem] md:text-center lg:text-sm"
                                 onClick={NavCtx.toggleNav}
                                 end
                             >

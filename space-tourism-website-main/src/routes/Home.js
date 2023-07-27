@@ -15,7 +15,7 @@ const Home = () => {
                 it. Well sit back, and relax because we’ll give you a truly out
                 of this world experience!
             </p>
-            <div className="self-stretch grid items-center justify-center mt-[2rem] lg:col-[2/3] lg:row-[1/4] lg:self-end">
+            <div className="self-stretch grid items-center justify-center lg:col-[2/3] lg:row-[1/4] lg:self-end">
                 <div className="hover:bg-dark-grey rounded-full md:p-[80px_40px] transition-bg duration-[.5s] ease">
                     <Link
                         to="/destination"
