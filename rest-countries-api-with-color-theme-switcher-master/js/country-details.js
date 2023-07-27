@@ -73,7 +73,7 @@ function createDetailsCard(country) {
         languages.push("Unknown");
     }
     languages = languages.join(", ");
-localSto
+
     let borderCountries = [];
     if (country.borders) {
         country.borders.forEach((border) => {
